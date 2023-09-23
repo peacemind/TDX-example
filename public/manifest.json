@@ -1,0 +1,10 @@
+{
+  "short_name": "Hello,Bus!",
+  "name": "全台公車動態時刻查詢網",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#5A637E",
+  "background_color": "#ffffff",
+  "description": "全台公車動態時刻查詢網",
+  "lang":"zh-Hant-TW"
+}

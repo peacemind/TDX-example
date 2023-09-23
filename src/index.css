@@ -1,0 +1,91 @@
+html {
+  font-size: 16px;
+}
+
+body,
+section,
+header,
+ul,
+footer,
+nav,
+figure,
+p,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', 'Roboto', 'sans-serif';
+}
+
+body {
+  color: #4C546A;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  font-family: 'Noto Sans TC', 'Roboto', 'sans-serif';
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: #E6E6E6;
+}
+
+a:focus,
+input:focus {
+  outline: none;
+  border: none;
+}
+
+#modal {
+  position: relative;
+}
+
+.whiteFont {
+  color: #fff;
+}
+
+.mainColor {
+  background-color: #5A637E;
+  color: #fff;
+}
+
+.lightColor {
+  background-color: #fff;
+  color: #4C546A;
+}
+
+.secondColor {
+  background-color: #5CBCDB;
+  color: #fff;
+}
+
+.pcHidden {
+  display: none;
+}
+
+@media screen and (max-width: 720px) {
+  .mbHidden {
+    display: none !important;
+  }
+  .pcHidden {
+    display: block;
+  }
+}

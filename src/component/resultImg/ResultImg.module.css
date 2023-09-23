@@ -1,0 +1,24 @@
+.image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  line-height: 1.4375em;
+  color: #bcc1d1;
+}
+
+.image > img {
+  margin-bottom: 14px;
+}
+
+@media screen and (max-width: 320px) {
+  .image {
+    line-height: 0.5;
+    font-size: 0.75rem;
+  }
+
+  .image > img {
+    width: 35%;
+  }
+}

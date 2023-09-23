@@ -1,0 +1,178 @@
+.frameContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.bottomRound {
+  border-radius: 0 0 20px 20px;
+}
+
+.title {
+  margin: 15px 0 0;
+  padding-bottom: 13px;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: -0.3px;
+  user-select: none;
+}
+
+.contentContainer {
+  display: flex;
+}
+
+.contentNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.contentNav button {
+  position: relative;
+  max-width: 65px;
+  margin-right: -1px;
+  padding: 66px 22px;
+  text-align: center;
+  word-break: break-all;
+  border-radius: 20px 0 0 20px;
+  border: 1px solid #5a637e;
+  background-color: #fff;
+}
+
+.contentNav > button:first-child {
+  margin-bottom: -1px;
+}
+
+.contentNav button.active {
+  border-right: 1px solid #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 821px;
+  height: 60vh;
+  padding: 20px 57px;
+  border-radius: 0 20px 20px 20px;
+  border: 1px solid #5a637e;
+}
+
+.content.likedExist {
+  display: block;
+}
+
+.content > div:first-child {
+  height: inherit;
+}
+
+.content ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.content li {
+  width: 48%;
+}
+
+.content ul li:last-child {
+  margin-bottom: 1.7vh;
+}
+
+.content > div.contentImg {
+  height: auto;
+}
+
+.pageController {
+  flex: 1;
+  text-align: center;
+}
+
+.pagePrevious {
+  margin-right: 10px;
+}
+
+.pageNext {
+  vertical-align: super;
+  transform: rotate(180deg);
+}
+
+.pagePrevious.clickable,
+.pageNext.clickable {
+  cursor: pointer;
+}
+
+.pagePrevious.clickable svg path,
+.pageNext.clickable svg path {
+  fill: #5cbcdb;
+}
+
+@media screen and (max-width: 320px) {
+  .content > div:first-child {
+    max-height: 42vh;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .content > div:first-child {
+    max-height: 50vh;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .content > div:first-child {
+    max-height: 54vh;
+  }
+}
+
+@media screen and (max-width: 886px) {
+  .container {
+    flex: 1;
+    align-items: stretch;
+  }
+  .contentContainer {
+    flex-direction: column;
+  }
+  .contentNav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .contentNav button,
+  .content {
+    border: none;
+  }
+  .contentNav button {
+    flex: 1 50%;
+    position: static;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 12px 0;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
+  }
+  .contentNav > button:first-child {
+    margin-bottom: 0;
+  }
+  .contentNav button.active {
+    border-right: none;
+    border-bottom-color: #f66a4b;
+  }
+  .content {
+    flex: 1;
+    width: 100vw;
+    padding: 24px 18px;
+  }
+  .content li {
+    width: 100%;
+  }
+}

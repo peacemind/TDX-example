@@ -1,0 +1,113 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 11vh;
+}
+
+.header > h1 {
+  font-family: "Pacifico", monospace;
+  font-size: 1.875rem;
+  letter-spacing: -0.3px;
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.54);
+  user-select: none;
+}
+
+button.navSwitcherBtn {
+  background-color: transparent;
+}
+
+.navSwitcherBtn svg {
+  width: 25px;
+  stroke: #fff;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  user-select: none;
+}
+
+.nav > a {
+  margin-right: 3vw;
+}
+
+.nav > a:last-child {
+  margin-right: 0;
+}
+
+.header:after {
+  display: block;
+  content: "Hello,Bus!";
+  font-family: "Pacifico", monospace;
+  font-size: 1.875rem;
+  letter-spacing: -0.3px;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 720px) {
+  .header {
+    position: relative;
+    flex-direction: row-reverse;
+    padding: 0 4.8vw;
+    height: 60px;
+  }
+
+  .header:after {
+    display: none;
+  }
+
+  .header > h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  .navSwitcherBtn{
+    position: absolute;
+    z-index: 2;
+    left: 4.8vw;
+  }
+
+  .nav {
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 110px;
+    background-color: #5a637e;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .nav > a {
+    box-sizing: border-box;
+    padding: 1vh 7.5vw;
+    margin-right: 0;
+    margin-bottom: 30px;
+    height: 5vh;
+    line-height: 0.7;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  .nav.openNav {
+    width: 100vw;
+  }
+
+  .nav.openNav > a {
+    opacity: 1;
+  }
+
+  .activeLink {
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+  }
+}

@@ -1,0 +1,218 @@
+.keyBoard {
+  padding: 36px 23px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.keyIn{
+  transition: all 0.3s;
+}
+
+.keyIn li {
+  display: flex;
+  margin-bottom: 1vh;
+}
+
+.keyIn li:last-child {
+  margin-bottom: 0;
+}
+
+.keyIn button {
+  width: 70px;
+  flex: 1 1 70px;
+  margin-right: 9px;
+  padding: 0;
+  height: 50px;
+  font-size: 1.25rem;
+  border-radius: 10px;
+  background-color: #e5e5e5;
+  cursor: pointer;
+}
+
+.keyIn li > button:last-child {
+  margin-right: 0;
+}
+
+li button:hover {
+  background: #dedede;
+}
+
+button.red {
+  background: #de6868;
+}
+
+button.red:hover {
+  background: #ec7a7a;
+}
+
+button.blue {
+  background: #5274cd;
+}
+
+button.blue:hover {
+  background: #6787db;
+}
+
+button.brown {
+  background: #b29076;
+}
+
+button.brown:hover {
+  background: #c9a58c;
+}
+
+button.green {
+  background: #83c986;
+}
+
+button.green:hover {
+  background: #91d994;
+}
+
+button.yellow {
+  background: #edbe62;
+}
+
+button.yellow:hover {
+  background: #edc984;
+}
+
+button.orange {
+  background: #e88c59;
+}
+
+button.orange:hover {
+  background: #f2a478;
+}
+
+button.transparent {
+  box-sizing: border-box;
+  background: none;
+  outline: 1px solid #8b94b2;
+}
+
+button.transparent:hover {
+  background: #bcc3d9;
+  outline: none;
+}
+
+button.darkGrey {
+  background: #b1b4be;
+}
+
+button.darkGrey:hover {
+  background: #bcc1d1;
+}
+
+.selection {
+  width: 886px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.caption:after {
+  width: 36px;
+  height: 10px;
+  content: "";
+}
+
+.caption > button {
+  padding: 3px 10px;
+  text-align: center;
+  stroke: #4C546A;
+}
+
+.caption > button:hover {
+  background-color: #fff;
+}
+
+.caption svg {
+  width: 16px;
+}
+
+.caption h1 {
+  font-size: 1rem;
+}
+
+.content {
+  max-width: 661px;
+  margin: 0 auto;
+}
+
+.content li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5vh;
+}
+
+.content button {
+  width: 207px;
+  height: 6vh;
+  text-align: center;
+  border: 1px solid #8b94b2;
+  border-radius: 12px;
+}
+
+.content button:hover {
+  color: #fff;
+  border-color: #bcc1d1;
+  background: #bcc1d1;
+}
+
+.content li button:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 720px) {
+  .keyBoard {
+    width: 100vw;
+    padding: 14px 16px 16px;
+    border-radius: 20px 20px 0px 0px;
+    transition: all 0.3s;
+  }
+  .keyIn button {
+    height: 43px;
+  }
+  .selection {
+    padding: 0;
+    opacity: 0.9;
+  }
+  .content li {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .content button {
+    width: 100vw;
+    height: 60px;
+    border-radius: 0;
+    border-bottom: 1px solid #4c546a;
+  }
+  .toggleBtn {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-color: #4c546a transparent transparent transparent;
+    cursor: pointer;
+    box-sizing: content-box;
+    transition: all 0.3s;
+  }
+  .keyBoard.closed{
+    padding: 0 16px 13px;
+  }
+  .closed .toggleBtn {
+    transform: rotate(180deg);
+  }
+  .closed .keyIn{
+    display: none;
+    visibility: hidden;
+  }
+}

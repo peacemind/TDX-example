@@ -1,0 +1,201 @@
+.frameContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+.bottomRound {
+  border-radius: 0 0 20px 20px;
+}
+
+.searchBar {
+  padding: 2.1vh 0 3.3vh;
+}
+
+.searchBar span {
+  font-size: 0.875rem;
+  color: #4C546A;
+}
+
+.searching {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1vh;
+}
+
+.searching > input,
+.road > input {
+  height: 5.5vh;
+  max-height: 50px;
+  padding: 0 1.7vh;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background-color: #e6e6e6;
+}
+
+.searching > input {
+  width: 433px;
+}
+
+.road > input {
+  width: 100%;
+}
+
+.searching > input:focus,
+.road > input:focus {
+  outline: none;
+}
+
+.road {
+  width: 433px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e6e6e6;
+  border-radius: 12px;
+}
+
+.road button {
+  align-content: center;
+  background-color: #e6e6e6;
+  padding: 2px 16px;
+  border-radius: 12px;
+}
+
+.road svg {
+  width: 18px;
+  height: 18px;
+  fill: #e6e6e6;
+}
+
+.road svg path {
+  fill: #4c546a;
+}
+
+.container {
+  width: 886px;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4.8vh 0;
+}
+
+.result {
+  flex: 1;
+  align-self: stretch;
+  width: 433px;
+  margin-right: 20px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+
+.caption {
+  padding: 0.8vh 0;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.searchResult {
+  height:100%;
+  box-sizing: border-box;
+  padding: 1vh 7px 0;
+}
+
+.searchResult figure img {
+  width: 40%;
+}
+
+.roadName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roadName:after {
+  width: 36px;
+  height: 10px;
+  content: "";
+}
+
+.roadName > button {
+  padding: 3px 10px;
+  text-align: center;
+  stroke: #4c546a;
+}
+
+.roadName > button:hover {
+  background-color: #fff;
+}
+
+.roadName svg {
+  width: 16px;
+}
+
+.roadName h1 {
+  font-size: 1rem;
+}
+
+.alert {
+  width: 320px;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  color: #f66a4b;
+  font-size: 2rem;
+  font-weight: bold;
+  word-break: break-all;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 720px) {
+  .frameContainer {
+    justify-content: space-between;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  .searchBar {
+    padding: 2.1vh 4.8vw 0;
+  }
+
+  .searching {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 12px;
+  }
+  .searchBar span {
+    font-size: 0.75rem;
+  }
+  .searching input {
+    width: auto;
+    height: 40px;
+    padding: 0 1.7vh;
+    font-size: 1rem;
+  }
+  .searching > input {
+    margin-bottom: 12px;
+  }
+  .road {
+    width: auto;
+  }
+  .content {
+    flex-direction: column;
+    padding: 0;
+  }
+  .result {
+    width: 100%;
+    margin-right: 0;
+    box-shadow: none;
+  }
+  .searchResult {
+    padding: 0;
+  }
+}

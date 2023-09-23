@@ -1,0 +1,116 @@
+.table {
+  padding: 22px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tableHeader button {
+  padding: 10px;
+}
+
+.tableTitle {
+  margin: 0;
+  flex: 1 1;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.tableHeader svg {
+  width: 16px;
+  height: 16px;
+}
+
+.tableHeader svg line {
+  stroke: #4c546a;
+  stroke-width: 3px;
+}
+
+.sheetContainer {
+  max-height: 513px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  overflow: scroll;
+}
+
+.sheetContainer::-webkit-scrollbar {
+  width: 3px;
+}
+
+.sheetContainer::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.sheetContainer::-webkit-scrollbar-thumb {
+  background-color: #5a637e;
+  border-radius: 3px;
+}
+
+.sheet {
+  width: 320px;
+  margin-right: 20px;
+  padding: 0 15px 18px;
+  text-align: center;
+  box-shadow: 0px 4px 10px -1px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  border-collapse: collapse;
+}
+
+.sheet:last-child {
+  margin-right: 0;
+}
+
+.sheetTitle {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #5a637e;
+  border-radius: 12px 12px 0 0;
+}
+
+.sheet tr:nth-child(odd) div {
+  background-color: #d8dae0;
+}
+
+.sheet th {
+  height: 57px;
+  color: #5cbcdb;
+}
+
+.sheet td {
+  font-size: 0.875rem;
+}
+
+.sheet td div {
+  display: inline-block;
+  width: 130px;
+  height: 28px;
+  padding-top: 4px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 720px) {
+  .table {
+    align-self: start;
+    justify-self: start;
+    height: auto;
+    overflow: auto;
+  }
+  .sheetContainer {
+    flex-direction: column;
+    justify-content: start;
+    max-height: 732px;
+  }
+  .sheet {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+}

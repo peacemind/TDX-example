@@ -1,0 +1,316 @@
+.frameContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.topRound {
+  border-radius: 20px 20px 0 0;
+}
+
+.container {
+  max-width: 886px;
+  margin: 0 auto;
+}
+
+.roadHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.tool {
+  padding-bottom: 24px;
+}
+
+.tool > .toolIcon:first-child {
+  margin-right: 16px;
+}
+
+.toolIcon {
+  background-color: transparent;
+  color: #fff;
+}
+
+.toolIcon svg {
+  width: 44px;
+  height: 44px;
+  vertical-align: bottom;
+}
+
+.tool svg circle {
+  fill: #5cbcdb;
+}
+
+.toolName {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: super;
+  font-size: 1.25rem;
+}
+
+.roadTitle {
+  text-align: right;
+}
+
+.roadTitle h2 {
+  font-size: 3.75rem;
+  line-height: 0.1rem;
+}
+
+.roadTitle h3 {
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+.roadTitle svg path {
+  fill: #fff;
+}
+
+.contentBackground {
+  flex: 1 1;
+  background-color: #5a637e;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.leftContent {
+  flex: 0 1 421px;
+  margin-right: 36px;
+}
+
+.leftSubHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0 16px;
+  border-bottom: 0.74px #c4c4c4 solid;
+}
+
+.LSIcon svg {
+  width: 44px;
+  height: 44px;
+}
+
+.LSIcon svg circle {
+  fill: #5cbcdb;
+}
+
+.LSHDescription > div:first-child {
+  flex: 0.75rem;
+}
+
+.LSHDescription > div:nth-child(2) {
+  color: #5cbcdb;
+}
+
+.directionName {
+  display: inline-block;
+  margin-left: 5px;
+  color: #4c546a;
+}
+
+.LSContent {
+  height: 45vh;
+  overflow: scroll;
+}
+
+.LSContent::-webkit-scrollbar {
+  width: 3px;
+}
+
+.LSContent::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+.LSContent::-webkit-scrollbar-thumb {
+  background-color: #5a637e;
+  border-radius: 3px;
+}
+
+.stopInfo {
+  display: flex;
+  position: relative;
+  padding: 14px 0 11px 35px;
+}
+
+.stopInfo:last-child {
+  padding-bottom: 0;
+}
+
+.stopInfo::before {
+  content: "";
+  position: absolute;
+  top: 36px;
+  left: 10px;
+  width: 20px;
+  height: 100%;
+  border-left: 1px solid #4c546a;
+}
+.stopInfo:last-child::before {
+  border-left: none;
+}
+
+.stopInfo:last-child::before {
+  border-left: none;
+}
+
+.stopInfo::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border: 4px solid #4c546a;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.stopTime {
+  margin-right: 12px;
+}
+
+.stopName {
+  flex: 1 1;
+}
+
+.bus{
+  text-align: center;
+}
+
+.busID {
+  margin-right: 10px;
+  padding: 0 8px;
+  color: #5cbcdb;
+  border: 1px solid #5cbcdb;
+  border-radius: 100px;
+}
+
+.busID svg {
+  width: 16px;
+  height: 16px;
+}
+
+.busID svg path {
+  fill: #5cbcdb;
+}
+
+.passed .stopTime,
+.passed .stopName {
+  color: #b4b3b3;
+}
+
+.current.stopInfo::after,
+.currentFirst.stopInfo::after {
+  border-color: #f66a4b;
+}
+
+.current .stopTime {
+  color: #f66a4b;
+  /* border-left-color: #f66a4b; */
+}
+
+.rightContent {
+  flex: 0 1 50%;
+}
+
+.mapContainer {
+  position: relative;
+}
+
+.mapStopSwitch {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  padding: 8px;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.mapSwitch {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.alert {
+  width: 320px;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+  color: #f66a4b;
+  font-size: 2rem;
+  font-weight: bold;
+  word-break: break-all;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 320px){
+  .tool {
+    padding-bottom: 16px;
+  }
+
+  .toolIcon svg{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .roadTitle h2{
+    margin: 4vh 0 6vh;
+  }
+
+  .roadTitle h3{
+    font-size: 1rem;
+  }
+
+  .leftContent {
+    flex: 0 1;
+  }
+}
+
+@media screen and (max-width:720px) {
+  .header svg line{
+    stroke:#4c546a;
+  }
+  
+  .mbRoadInfoTitle {
+    background-color: transparent;
+    padding-top: 10px;
+    padding-left: 15px;
+  }
+
+  .mbRoadInfoTitle button {
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .mbRoadInfoTitle svg path {
+    fill: #fff;
+  }
+
+  .roadHeader {
+    padding: 0 15px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+  .tool > svg:first-child {
+    margin-left: 10px;
+  }
+  
+  .toolIcon {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+  }
+
+  .leftContent { 
+    margin-right: 0;
+    padding: 0 15px;
+  }
+}

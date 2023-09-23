@@ -1,0 +1,84 @@
+.frameContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.banner {
+    height: 78vh;
+    background: #fff url('../../img/bc.png') center bottom/cover no-repeat;
+}
+
+.bannerText {
+    text-align: center;
+    user-select: none;
+    font-size: 1.625rem;
+    letter-spacing: 4.5px;
+    color: #fff
+}
+
+.bannerText :first-child {
+    font-family: 'Pacifico', monospace;
+    font-size: 5rem;
+    letter-spacing: -0.3px;
+    line-height: 2;
+    text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.54);
+}
+
+.iconNav {
+    display: flex;
+    justify-content: space-around;
+    width: 60vw;
+    margin: -7vh auto 0;
+    font-size: 1.25rem;
+    line-height: 1.8125;
+    text-align: center;
+}
+
+.iconNav svg {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.iconNav svg circle {
+    fill: #5CBCDB;
+}
+
+.iconNav svg:hover circle {
+    fill: #399BBA;
+}
+
+
+@media screen and (max-width : 720px) {
+    .banner {
+        height: 77vh;
+        padding-top: 16vh;
+        background-image: url('../../img/bc_mb.png');
+    }
+
+    .bannerText {
+        font-size: 0.875rem;
+        letter-spacing: 1.5px;
+    }
+
+    .bannerText :first-child {
+        font-size: 3rem;
+        line-height: 1.77;
+    }
+
+    .iconNav {
+        margin-top: -9vw;
+        width: 76.8vw;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+
+    .iconNav svg {
+        width: 16vw;
+        height: 16vw;
+    }
+}
